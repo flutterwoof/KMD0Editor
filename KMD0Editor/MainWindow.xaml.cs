@@ -359,19 +359,6 @@ namespace KMD0Editor
             fs.Close();
         }
 
-        private string ToBitString(BitArray bits)
-        {
-            var sb = new StringBuilder();
-
-            for (int i = 0; i < bits.Count; i++)
-            {
-                char c = bits[i] ? '1' : '0';
-                sb.Append(c);
-            }
-
-            return sb.ToString();
-        }
-
         private bool SeekMIDIToKMD0Spot(FileStream fs)
         {
             byte[] MIDIHeader = new byte[4];
